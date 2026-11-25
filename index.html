@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3ecdc">
+  <title>Santiago Molina Sánchez · Computer Engineering graduate</title>
+  <meta name="description" content="Santiago Molina Sánchez, Computer Engineering graduate focused on software engineering, backend and industrial systems. MSc student in Computer Science in Portalegre, Portugal.">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://santiagomolina.pages.dev/">
+  <!-- Pré-visualização ao partilhar o link (LinkedIn, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://santiagomolina.pages.dev/">
+  <meta property="og:title" content="Santiago Molina Sánchez · Computer Engineering graduate">
+  <meta property="og:description" content="Computer Engineering graduate focused on software engineering, backend and industrial systems. MSc student in Computer Science in Portalegre, Portugal.">
+  <meta property="og:image" content="https://santiagomolina.pages.dev/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cover of Santiago Molina Sánchez's portfolio: name, role and a code listing">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Fontes IBM Plex alojadas no site (css/styles.css, @font-face): sem pedidos a terceiros -->
+  <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/social-keys.css">
+</head>
+<body>
+
+  <!-- ===================== Navegação ===================== -->
+  <header class="site-nav">
+    <!-- Índice flutuante: teclas 0–4 (também no teclado) + CV. A tecla da secção atual acende (index-keys.js). -->
+    <nav class="index-bar" aria-label="Sections">
+      <ol class="index-keys">
+        <li><a class="ikey" href="#quick" data-key="0"><kbd>0</kbd><span class="ikey-label">In short</span></a></li>
+        <li><a class="ikey" href="#work" data-key="1"><kbd>1</kbd><span class="ikey-label">My projects</span></a></li>
+        <li><a class="ikey" href="#about" data-key="2"><kbd>2</kbd><span class="ikey-label">Who I am</span></a></li>
+        <li><a class="ikey" href="#education" data-key="3"><kbd>3</kbd><span class="ikey-label">What I studied</span></a></li>
+        <li><a class="ikey" href="#contact" data-key="4"><kbd>4</kbd><span class="ikey-label">Let's talk</span></a></li>
+      </ol>
+      <!-- CV em inglês; a versão portuguesa está no §0 e no §4 -->
+      <a class="index-cv" href="assets/cv/CV_EN_Santiago_Sanchez.pdf" hreflang="en" target="_blank" rel="noopener" aria-label="Resume (PDF)"><span class="cv-long">Resume</span><span class="cv-short">CV</span></a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== Capa ===================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container cover">
+        <div class="cover-main">
+          <!-- Faixa de identificação, como no topo de uma folha técnica -->
+          <p class="doc-strip" aria-hidden="true"><span>Doc. SMS-01</span><span>Portfolio</span><span>Rev. 2026</span></p>
+          <p class="eyebrow">Computer Engineering graduate · Software</p>
+          <h1 id="hero-title" class="hero-name">
+            <span class="sr-only">Santiago Molina Sánchez</span>
+            <span class="name-line" aria-hidden="true">Santiago </span><span class="name-middle" data-rest="olina" aria-hidden="true"><span aria-hidden="true">M</span><span class="name-rest" aria-hidden="true"></span><span class="name-dot" aria-hidden="true">.</span><span class="name-cursor" aria-hidden="true"></span></span><br>
+            <span aria-hidden="true">Sánchez</span>
+          </h1>
+          <p class="hero-lead">I write software that runs real things, from full-stack web applications to industrial automation.</p>
+          <p class="hero-meta">MSc student in Computer Science · Portalegre, Portugal</p>
+
+        </div>
+
+        <!-- Listing 0: a mesma frase em 5 linguagens, escrita em loop (decorativo) -->
+        <div class="listing">
+          <div id="code-bg" data-speed="1"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== §0 In short ===================== -->
+    <section class="section" id="quick" aria-labelledby="quick-title">
+      <div class="container sheet">
+        <header class="side-head">
+          <p class="sec-num">§0</p>
+          <h2 id="quick-title">In short</h2>
+        </header>
+        <div class="sheet-body">
+          <dl class="spec">
+            <div><dt>Role</dt><dd>Computer Engineering graduate · software engineering, backend &amp; industrial</dd></div>
+            <div><dt>Stack</dt><dd>Java · Spring Boot · Drools · MySQL · Python · PLC (Ladder, Grafcet)</dd></div>
+            <div><dt>Status</dt><dd>Open to internships and junior roles · available now</dd></div>
+            <div><dt>Location</dt><dd>Portalegre, Portugal · open to hybrid, remote or relocation</dd></div>
+            <div><dt>Languages</dt><dd>Spanish (native) · Portuguese (native) · English (C1)</dd></div>
+            <div><dt>Awards</dt><dd>3rd prize · Data Analysis Hackathon, ESTGD 2026</dd></div>
+            <div><dt>Certifications</dt><dd>Cisco CCNA: Introduction to Networks · CCNA: Enterprise Networking, Security, and Automation</dd></div>
+            <div>
+              <dt>Projects</dt>
+              <dd>
+                <ol class="spec-list">
+                  <li><a href="#mymob">1.1 MyMOB</a> · clinical referral rules, with a hospital</li>
+                  <li><a href="#reactor">1.2 Hydrogen Reactor Control</a> · PLC control, Modbus TCP, Node-RED</li>
+                  <li><a href="#location">1.3 Group Location Sharing</a> · Flutter and Firebase</li>
+                  <li><a href="#erasmus">1.4 Tangible Interface for VR</a> · Erasmus BIP, Belgium</li>
+                  <li><a href="#lead-crm">1.5 Lead CRM</a> · technical challenge, Next.js and Prisma</li>
+                </ol>
+              </dd>
+            </div>
+            <div><dt>Resume</dt><dd class="cv-links"><a href="assets/cv/CV_EN_Santiago_Sanchez.pdf" hreflang="en" target="_blank" rel="noopener">English (PDF)</a> · <a href="assets/cv/CV_Santiago_Sanchez.pdf" hreflang="pt" lang="pt" target="_blank" rel="noopener">Português (PDF)</a></dd></div>
+            <div>
+              <dt>Contact</dt>
+              <dd>
+                <a class="spec-email" href="mailto:santiagomoli09@gmail.com">santiagomoli09@gmail.com</a>
+
+                <!-- Teclas 3D com atalhos reais (G, L, E) -->
+                <nav class="social-keys" aria-label="Social links">
+                  <div class="key-wrap">
+                    <a class="key" data-brand="github" data-key="g" data-icon="assets/icons/github.svg"
+                       href="https://github.com/santimoli" target="_blank" rel="noopener"
+                       aria-label="Santiago Molina Sánchez on GitHub (shortcut: G)">
+                      <span class="key-cap">
+                        <span class="key-legend" aria-hidden="true">G</span>
+                        <span class="key-icon" aria-hidden="true"></span>
+                        <span class="key-fallback" aria-hidden="true">G</span>
+                      </span>
+                    </a>
+                    <span class="key-tip" aria-hidden="true">GitHub</span>
+                  </div>
+                  <div class="key-wrap">
+                    <a class="key" data-brand="linkedin" data-key="l" data-icon="assets/icons/linkedin.svg"
+                       href="https://www.linkedin.com/in/santiMoliSanchez" target="_blank" rel="noopener"
+                       aria-label="Santiago Molina Sánchez on LinkedIn (shortcut: L)">
+                      <span class="key-cap">
+                        <span class="key-legend" aria-hidden="true">L</span>
+                        <span class="key-icon" aria-hidden="true"></span>
+                        <span class="key-fallback" aria-hidden="true">in</span>
+                      </span>
+                    </a>
+                    <span class="key-tip" aria-hidden="true">LinkedIn</span>
+                  </div>
+                  <div class="key-wrap">
+                    <button class="key" type="button" data-brand="email" data-key="e" data-icon="envelope"
+                            data-email="santiagomoli09@gmail.com"
+                            aria-label="Copy Santiago Molina Sánchez's email address (shortcut: E)">
+                      <span class="key-cap">
+                        <span class="key-legend" aria-hidden="true">E</span>
+                        <span class="key-icon" aria-hidden="true"></span>
+                        <span class="key-fallback" aria-hidden="true">@</span>
+                      </span>
+                    </button>
+                    <span class="key-tip" aria-hidden="true">Copy email</span>
+                  </div>
+                  <div class="key-pop" role="status" aria-live="polite" hidden></div>
+                </nav>
+                <p class="key-hint">Press <kbd>G</kbd>, <kbd>L</kbd> or <kbd>E</kbd> on your keyboard.</p>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== §1 Projetos ===================== -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container sheet">
+        <header class="side-head">
+          <p class="sec-num">§1</p>
+          <h2 id="work-title">My projects</h2>
+        </header>
+        <div class="sheet-body projects">
+
+          <!-- MyMOB -->
+          <article class="project" id="mymob" aria-labelledby="mymob-title">
+            <div class="project-body">
+              <p class="project-tag">BSc final project · Healthcare</p>
+              <h3 id="mymob-title"><span class="sub-num">1.1</span> MyMOB</h3>
+              <dl class="figures">
+                <div><dt>Stages</dt><dd>10</dd></div>
+                <div><dt>Roles</dt><dd>3</dd></div>
+                <div><dt>Hospital</dt><dd>1</dd></div>
+              </dl>
+              <p>A clinical platform that tracks the mobility of elderly surgical patients, built in partnership with Hospital Dr. José Maria Grande in Portalegre.</p>
+              <p class="project-role">Each patient follows a ten-stage clinical process, from medical triage to discharge: frailty (CFS), sarcopenia (SARC-F) and physical performance (SPPB) screening, an exercise plan, and daily session records with safety parameters. Surgeons, physiatrists and physiotherapists each see their own part of it, and triage and referral decisions are Drools rules behind a REST API with role-based access.</p>
+              <p class="project-role"><strong>My role:</strong> I built the whole platform as my final project for the BSc in Computer Engineering.</p>
+              <ul class="stack" aria-label="Technologies">
+                <li>Java</li><li>Spring Boot</li><li>Drools</li><li>MySQL</li><li>JWT</li><li>React</li><li>TypeScript</li>
+              </ul>
+            </div>
+            <!-- Captura da app (dados fictícios). Clicar abre o visor (plates.js). -->
+            <figure class="project-figure plate is-stacked">
+              <span class="stamp">In progress</span>
+              <div class="plate-grid">
+                <a class="plate-item plate-main" href="assets/img/mymob-process.jpg" data-caption="Patient process: the ten clinical stages, with the daily session record as the current stage (fictitious data)">
+                  <img src="assets/img/mymob-process.jpg" alt="MyMOB patient process screen listing ten clinical stages from medical triage to clinical discharge, with completed stages ticked and the daily session record marked as current" width="1600" height="777" loading="lazy">
+                </a>
+              </div>
+              <figcaption>Fig. 1 · MyMOB patient process</figcaption>
+            </figure>
+          </article>
+
+          <!-- Reator de hidrogénio -->
+          <article class="project" id="reactor" aria-labelledby="reactor-title">
+            <div class="project-body">
+              <p class="project-tag">Industrial Informatics final project · Team</p>
+              <h3 id="reactor-title"><span class="sub-num">1.2</span> Hydrogen Reactor Control</h3>
+              <dl class="figures">
+                <div><dt>Sensors</dt><dd>18</dd></div>
+                <div><dt>Program units</dt><dd>9</dd></div>
+                <div><dt>Alarm tiers</dt><dd>2</dd></div>
+              </dl>
+              <p>Control and monitoring of a hydrogen production reactor: calibration, operating modes, membrane hydration, voltage ramp, cooling and H₂ production with cyclic purging.</p>
+              <p class="project-role"><strong>My role:</strong> the PLC control logic (Grafcet and Ladder, 9 program units, two-tier alarms, controlled shutdown), the operator HMI in Vijeo Designer, and the Node-RED dashboard that reads the PLC over Modbus TCP and keeps historical data in InfluxDB.</p>
+              <ul class="stack" aria-label="Technologies">
+                <li>Schneider M221</li><li>Ladder</li><li>Grafcet</li><li>Vijeo Designer (HMI)</li><li>Modbus TCP</li><li>Node-RED</li><li>InfluxDB</li>
+              </ul>
+            </div>
+            <!-- Prancha: dois ecrãs do HMI, lado a lado. Clicar abre o visor (plates.js). -->
+            <figure class="project-figure plate is-landscape">
+              <div class="plate-grid">
+                <a class="plate-item" href="assets/img/h2-hmi-waterflow.jpg" data-caption="(a) HMI water flow screen: pump, flow meter, fans and reactor temperature">
+                  <img src="assets/img/h2-hmi-waterflow.jpg" alt="HMI water flow screen with the water pump, a flow reading of 12 litres per minute, two cooling fans and the reactor temperature tag" width="643" height="487" loading="lazy">
+                  <span class="plate-tag" aria-hidden="true">a</span>
+                </a>
+                <a class="plate-item" href="assets/img/h2-hmi-hydride.jpg" data-caption="(b) HMI water tank screen: hydride tank and valves V11 to V22">
+                  <img src="assets/img/h2-hmi-hydride.jpg" alt="HMI water tank screen with the hydride tank, hot and cold water lines and valves V11, V12, V13, V14, V21 and V22" width="646" height="490" loading="lazy">
+                  <span class="plate-tag" aria-hidden="true">b</span>
+                </a>
+              </div>
+              <figcaption>Fig. 2 · Operator HMI in Vijeo Designer</figcaption>
+            </figure>
+          </article>
+
+          <!-- App Flutter -->
+          <article class="project" id="location" aria-labelledby="location-title">
+            <div class="project-body">
+              <p class="project-tag">MSc coursework · Mobile</p>
+              <h3 id="location-title"><span class="sub-num">1.3</span> Group Location Sharing</h3>
+              <p>A mobile app where groups share their live location and get alerted when members move too far apart.</p>
+              <p class="project-role">Firebase handles sign-in and keeps locations in sync. The app compares the distance between members to decide when to send an alert.</p>
+              <ul class="stack" aria-label="Technologies">
+                <li>Flutter</li><li>Dart</li><li>Firebase Auth</li><li>Realtime Database</li>
+              </ul>
+            </div>
+            <!-- Dois vídeos da app (telemóvel): tocam sem som na miniatura enquanto estão à vista; clicar abre-os no visor (plates.js). -->
+            <figure class="project-figure plate is-phone">
+              <div class="plate-grid is-phone">
+                <a class="plate-item plate-video" href="assets/video/geo-demo.mp4" data-type="video" data-poster="assets/img/geo-demo-poster.jpg" data-caption="(a) Creating a group, sharing its code and turning on location sharing (26 s, Android emulator)">
+                  <video src="assets/video/geo-demo.mp4" poster="assets/img/geo-demo-poster.jpg" width="552" height="1198" muted loop playsinline preload="none" aria-label="App demo: creating a group called Friends, copying its invite code, then opening a group and turning on location sharing, with the user marker on the map"></video>
+                  <span class="plate-play" aria-hidden="true">▶</span>
+                  <span class="plate-tag" aria-hidden="true">a</span>
+                </a>
+                <a class="plate-item plate-video" href="assets/video/geo-login.mp4" data-type="video" data-poster="assets/img/geo-login-poster.jpg" data-caption="(b) Sign-in screen with the animated background (10 s)">
+                  <video src="assets/video/geo-login.mp4" poster="assets/img/geo-login-poster.jpg" width="576" height="1188" muted loop playsinline preload="none" aria-label="GeoGrupos sign-in screen with email and password fields over an animated network of map pins and cyclists"></video>
+                  <span class="plate-play" aria-hidden="true">▶</span>
+                  <span class="plate-tag" aria-hidden="true">b</span>
+                </a>
+              </div>
+              <figcaption>Fig. 3 · GeoGrupos app</figcaption>
+            </figure>
+          </article>
+
+          <!-- Erasmus BIP (dados do CV: Mons, março 2025) -->
+          <article class="project" id="erasmus" aria-labelledby="erasmus-title">
+            <div class="project-body">
+              <p class="project-tag">Erasmus BIP · Mons, Belgium · March 2025</p>
+              <h3 id="erasmus-title"><span class="sub-num">1.4</span> Tangible Interface for VR</h3>
+              <p>An international week at Haute École Louvain en Hainaut (HELHa) with students, teachers and researchers from across Europe. The challenge was to design and build tangible interfaces for VR: devices with motion sensors (IMUs) that capture real-world movement and send it to a VR headset.</p>
+              <p class="project-role"><strong>My role:</strong> working in a group through workshops and classes, I wrote the Arduino code for a board with an IMU (accelerometer and gyroscope) that moves the maze board built in Godot, which is seen in virtual reality.</p>
+              <ul class="stack" aria-label="Technologies">
+                <li>Arduino</li><li>ROS 2</li><li>Godot Engine</li>
+              </ul>
+            </div>
+            <!-- Prancha: (a) em grande, (b) e (c) em miniatura. Clicar abre o visor (plates.js). -->
+            <figure class="project-figure plate">
+              <div class="plate-grid">
+                <a class="plate-item plate-main" href="assets/img/erasmus-godot.jpg" data-caption="(a) Maze level in the Godot Engine, with the XR player and the ball in the scene tree">
+                  <img src="assets/img/erasmus-godot.jpg" alt="Godot Engine editor showing a 3D maze level with a ball, and the XR player and godot-xr-tools in the project" width="1600" height="628" loading="lazy">
+                  <span class="plate-tag" aria-hidden="true">a</span>
+                </a>
+                <a class="plate-item" href="assets/img/erasmus-lab.jpg" data-caption="(b) Testing session at the HELHa VR lab">
+                  <img src="assets/img/erasmus-lab.jpg" alt="Two people wearing VR headsets in the HELHa lab, with the VR scene on the screens above them" width="525" height="700" loading="lazy">
+                  <span class="plate-tag" aria-hidden="true">b</span>
+                </a>
+                <a class="plate-item" href="assets/img/erasmus-badge.jpg" data-caption="(c) Erasmus+ participant badge, HELHa">
+                  <img src="assets/img/erasmus-badge.jpg" alt="HELHa lanyard and Erasmus+ participant badge with the name Molina Sanchez Santiago" width="900" height="1200" loading="lazy">
+                  <span class="plate-tag" aria-hidden="true">c</span>
+                </a>
+              </div>
+              <figcaption>Fig. 4 · Erasmus BIP at HELHa</figcaption>
+            </figure>
+          </article>
+
+          <!-- Lead CRM: desafio técnico de uma candidatura (6 dias). A captura entra mais tarde. -->
+          <article class="project" id="lead-crm" aria-labelledby="lead-crm-title">
+            <div class="project-body">
+              <p class="project-tag">Technical challenge · Web</p>
+              <h3 id="lead-crm-title"><span class="sub-num">1.5</span> <a class="title-link" href="https://github.com/santimoli/lead-crm" target="_blank" rel="noopener" aria-label="Lead CRM, code on GitHub">Lead CRM<img class="title-link-icon" src="assets/icons/github.svg" alt="" width="16" height="16"></a></h3>
+              <p>A CRM for sales leads, built as a technical challenge: create, edit and delete leads, search by name or email, filter by status, and a sidebar with totals per status and the latest leads.</p>
+              <p class="project-role"><strong>My role:</strong> The code is split into layers, like a controller and a service in Spring Boot: routes only handle HTTP, the service holds the rules, and one function maps errors to status codes. Pagination runs on the server.</p>
+              <ul class="stack" aria-label="Technologies">
+                <li>Next.js</li><li>React</li><li>Prisma</li><li>SQLite</li><li>Zod</li>
+              </ul>
+            </div>
+            <!-- Captura da app com o seed de exemplo. Clicar abre o visor (plates.js). -->
+            <figure class="project-figure plate is-stacked">
+              <div class="plate-grid">
+                <a class="plate-item plate-main" href="assets/img/lead-crm.jpg" data-caption="Leads page with the status sidebar, the latest leads, the add form and the paginated list (seed data)">
+                  <img src="assets/img/lead-crm.jpg" alt="Lead CRM page: a sidebar with lead counts per status and the five latest leads, a form to add a lead, and a table of leads with edit and delete buttons" width="1600" height="721" loading="lazy">
+                </a>
+              </div>
+              <figcaption>Fig. 5 · Lead CRM</figcaption>
+            </figure>
+          </article>
+
+          <!-- Repositórios públicos mais pequenos (trabalhos de Python): sem figura -->
+          <div class="more-code">
+            <h3 class="certs-label">More code on GitHub</h3>
+            <ul class="more-list">
+              <li>
+                <a class="title-link" href="https://github.com/santimoli/bfs-astar-map" target="_blank" rel="noopener" aria-label="bfs-astar-map, code on GitHub">bfs-astar-map<img class="title-link-icon" src="assets/icons/github.svg" alt="" width="16" height="16"></a>
+                <p>Map navigation on grid maps with BFS and A* (Manhattan distance heuristic), with a tkinter view of the path. Python.</p>
+              </li>
+              <li>
+                <a class="title-link" href="https://github.com/santimoli/tsp-local-search" target="_blank" rel="noopener" aria-label="tsp-local-search, code on GitHub">tsp-local-search<img class="title-link-icon" src="assets/icons/github.svg" alt="" width="16" height="16"></a>
+                <p>Six local search variants for the Travelling Salesman Problem, hill climbing with 2-opt and inversion neighbourhoods, tested on TSPLIB instances. Python.</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== §2 About ===================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container sheet">
+        <header class="side-head">
+          <p class="sec-num">§2</p>
+          <h2 id="about-title">Who I am</h2>
+        </header>
+        <div class="sheet-body about-grid">
+          <!-- Foto 4:5 -->
+          <figure class="portrait">
+            <div class="portrait-frame">
+              <img src="assets/img/photo.jpg" alt="Santiago Molina Sánchez" width="400" height="500" loading="lazy">
+            </div>
+            <figcaption>Fig. 6 · The author</figcaption>
+          </figure>
+          <div class="about-text">
+            <p>I graduated in Computer Engineering at the Polytechnic University of Portalegre, where I'm now doing an MSc in Computer Science. Software engineering is the part I enjoy most.</p>
+            <p>I like explicit, readable code, and I try to understand why a system works before changing it. In MyMOB that meant referral rules a clinician can read.</p>
+            <p>In the MSc I've become very interested in machine learning, which I'm getting into through data science programming.</p>
+            <p>Through coursework I've also set up networks (BGP, IPsec VPNs, firewalls) and Linux servers (Samba AD, DNS, RAID).</p>
+          </div>
+          <!-- Passadeira de tecnologias (belt.js). Chips ligados a um projeto são links; sem JS ou com reduced-motion fica parada. -->
+          <div class="belt" role="group" aria-labelledby="belt-title">
+            <p id="belt-title" class="belt-title">Tools I work with</p>
+            <div class="belt-row" data-direction="left">
+              <p class="belt-label">Backend &amp; data</p>
+              <div class="belt-window">
+                <ul class="belt-track">
+                  <li><a class="chip" href="#mymob" data-used="1.1 MyMOB"><img class="chip-icon" src="assets/icons/tech/openjdk.svg" alt="" width="14" height="14">Java</a></li>
+                  <li><a class="chip" href="#mymob" data-used="1.1 MyMOB"><img class="chip-icon" src="assets/icons/tech/springboot.svg" alt="" width="14" height="14">Spring Boot</a></li>
+                  <li><a class="chip" href="#mymob" data-used="1.1 MyMOB"><img class="chip-icon" src="assets/icons/tech/drools.svg" alt="" width="14" height="14">Drools</a></li>
+                  <li><a class="chip" href="#mymob" data-used="1.1 MyMOB"><img class="chip-icon" src="assets/icons/tech/rest.svg" alt="" width="14" height="14">REST APIs</a></li>
+                  <li><a class="chip" href="#mymob" data-used="1.1 MyMOB"><img class="chip-icon" src="assets/icons/tech/jsonwebtokens.svg" alt="" width="14" height="14">JWT</a></li>
+                  <li><a class="chip" href="#mymob" data-used="1.1 MyMOB"><img class="chip-icon" src="assets/icons/tech/mysql.svg" alt="" width="14" height="14">MySQL</a></li>
+                  <li><a class="chip" href="#reactor" data-used="1.2 Hydrogen Reactor Control"><img class="chip-icon" src="assets/icons/tech/influxdb.svg" alt="" width="14" height="14">InfluxDB</a></li>
+                  <li><a class="chip" href="#lead-crm" data-used="1.5 Lead CRM"><img class="chip-icon" src="assets/icons/tech/prisma.svg" alt="" width="14" height="14">Prisma</a></li>
+                  <li><a class="chip" href="#lead-crm" data-used="1.5 Lead CRM"><img class="chip-icon" src="assets/icons/tech/sqlite.svg" alt="" width="14" height="14">SQLite</a></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/postgresql.svg" alt="" width="14" height="14">PostgreSQL</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/nodedotjs.svg" alt="" width="14" height="14">Node.js</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/python.svg" alt="" width="14" height="14">Python</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/pandas.svg" alt="" width="14" height="14">pandas</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/numpy.svg" alt="" width="14" height="14">NumPy</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/scikitlearn.svg" alt="" width="14" height="14">scikit-learn</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/c.svg" alt="" width="14" height="14">C</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/cplusplus.svg" alt="" width="14" height="14">C++</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/dotnet.svg" alt="" width="14" height="14">C#/.NET</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="belt-row" data-direction="right">
+              <p class="belt-label">Industrial &amp; robotics</p>
+              <div class="belt-window">
+                <ul class="belt-track">
+                  <li><a class="chip" href="#reactor" data-used="1.2 Hydrogen Reactor Control"><img class="chip-icon" src="assets/icons/tech/schneiderelectric.svg" alt="" width="14" height="14">Schneider M221</a></li>
+                  <li><a class="chip" href="#reactor" data-used="1.2 Hydrogen Reactor Control"><img class="chip-icon" src="assets/icons/tech/ladder.svg" alt="" width="14" height="14">Ladder</a></li>
+                  <li><a class="chip" href="#reactor" data-used="1.2 Hydrogen Reactor Control"><img class="chip-icon" src="assets/icons/tech/grafcet.svg" alt="" width="14" height="14">Grafcet</a></li>
+                  <li><a class="chip" href="#reactor" data-used="1.2 Hydrogen Reactor Control"><img class="chip-icon" src="assets/icons/tech/hmi.svg" alt="" width="14" height="14">Vijeo Designer</a></li>
+                  <li><a class="chip" href="#reactor" data-used="1.2 Hydrogen Reactor Control"><img class="chip-icon" src="assets/icons/tech/modbus.svg" alt="" width="14" height="14">Modbus TCP</a></li>
+                  <li><a class="chip" href="#reactor" data-used="1.2 Hydrogen Reactor Control"><img class="chip-icon" src="assets/icons/tech/nodered.svg" alt="" width="14" height="14">Node-RED</a></li>
+                  <li><a class="chip" href="#erasmus" data-used="1.4 Tangible Interface for VR"><img class="chip-icon" src="assets/icons/tech/arduino.svg" alt="" width="14" height="14">Arduino</a></li>
+                  <li><a class="chip" href="#erasmus" data-used="1.4 Tangible Interface for VR"><img class="chip-icon" src="assets/icons/tech/ros.svg" alt="" width="14" height="14">ROS 2</a></li>
+                  <li><a class="chip" href="#erasmus" data-used="1.4 Tangible Interface for VR"><img class="chip-icon" src="assets/icons/tech/godotengine.svg" alt="" width="14" height="14">Godot Engine</a></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/cisco.svg" alt="" width="14" height="14">Cisco networking</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/linux.svg" alt="" width="14" height="14">Linux</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="belt-row" data-direction="left">
+              <p class="belt-label">Web, mobile &amp; DevOps</p>
+              <div class="belt-window">
+                <ul class="belt-track">
+                  <li><a class="chip" href="#mymob" data-used="1.1 MyMOB"><img class="chip-icon" src="assets/icons/tech/react.svg" alt="" width="14" height="14">React</a></li>
+                  <li><a class="chip" href="#lead-crm" data-used="1.5 Lead CRM"><img class="chip-icon" src="assets/icons/tech/nextdotjs.svg" alt="" width="14" height="14">Next.js</a></li>
+                  <li><a class="chip" href="#lead-crm" data-used="1.5 Lead CRM"><img class="chip-icon" src="assets/icons/tech/zod.svg" alt="" width="14" height="14">Zod</a></li>
+                  <li><a class="chip" href="#mymob" data-used="1.1 MyMOB"><img class="chip-icon" src="assets/icons/tech/typescript.svg" alt="" width="14" height="14">TypeScript</a></li>
+                  <li><a class="chip" href="#location" data-used="1.3 Group Location Sharing"><img class="chip-icon" src="assets/icons/tech/flutter.svg" alt="" width="14" height="14">Flutter</a></li>
+                  <li><a class="chip" href="#location" data-used="1.3 Group Location Sharing"><img class="chip-icon" src="assets/icons/tech/dart.svg" alt="" width="14" height="14">Dart</a></li>
+                  <li><a class="chip" href="#location" data-used="1.3 Group Location Sharing"><img class="chip-icon" src="assets/icons/tech/firebase.svg" alt="" width="14" height="14">Firebase</a></li>
+                  <li><span class="chip"><img class="chip-icon is-tile" src="assets/icons/tech/javascript.svg" alt="" width="14" height="14">JavaScript</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/html5.svg" alt="" width="14" height="14">HTML/CSS</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/chartdotjs.svg" alt="" width="14" height="14">Chart.js</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/docker.svg" alt="" width="14" height="14">Docker</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/docker.svg" alt="" width="14" height="14">Docker Compose</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/githubactions.svg" alt="" width="14" height="14">GitHub Actions</span></li>
+                  <li><span class="chip"><img class="chip-icon" src="assets/icons/tech/git.svg" alt="" width="14" height="14">Git</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="belt-bar">
+              <p class="belt-readout">Hover over or tap a tool to see where I used it.</p>
+              <button class="belt-pause" type="button" aria-pressed="false" hidden>Pause</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== §3 Education ===================== -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container sheet">
+        <header class="side-head">
+          <p class="sec-num">§3</p>
+          <h2 id="education-title">What I studied</h2>
+        </header>
+        <div class="sheet-body">
+          <ol class="timeline">
+            <li>
+              <time datetime="2026">Since 2026</time>
+              <div>
+                <h3>MSc in Computer Science</h3>
+                <p class="where">Polytechnic University of Portalegre (ESTGD)</p>
+                <p class="note">I'm continuing MyMOB as part of the programme.</p>
+              </div>
+            </li>
+            <li>
+              <time datetime="2026">Completed 2026</time>
+              <div>
+                <h3>BSc in Computer Engineering</h3>
+                <p class="where">Polytechnic University of Portalegre (ESTGD)</p>
+                <p class="note">Coursework across software development, industrial automation, networking and information security. Final project: MyMOB (with Hospital Dr. José Maria Grande).</p>
+              </div>
+            </li>
+          </ol>
+          <!-- Badges da Credly (imagens copiadas para o site; cada uma liga à página de verificação) -->
+          <div class="certs">
+            <h3 class="certs-label">Certifications</h3>
+            <ul class="cert-list">
+              <li>
+                <a class="cert" href="https://www.credly.com/badges/eaef6ca6-014f-41cb-a512-3d57551b7bf1" target="_blank" rel="noopener">
+                  <img src="assets/img/badges/ccna-ensa.png" alt="" width="64" height="64" loading="lazy">
+                  <span class="cert-name">CCNA: Enterprise Networking, Security, and Automation</span>
+                  <span class="cert-meta">Cisco · March 2026 · Verify on Credly</span>
+                </a>
+              </li>
+              <li>
+                <a class="cert" href="https://www.credly.com/badges/9c3ae7eb-16b1-4e57-96b8-266ec7ad6b0a" target="_blank" rel="noopener">
+                  <img src="assets/img/badges/ccna-itn.png" alt="" width="64" height="64" loading="lazy">
+                  <span class="cert-name">CCNA: Introduction to Networks</span>
+                  <span class="cert-meta">Cisco · May 2025 · Verify on Credly</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== §4 Contact ===================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container sheet">
+        <header class="side-head">
+          <p class="sec-num">§4</p>
+          <h2 id="contact-title">Let's talk</h2>
+        </header>
+        <div class="sheet-body">
+          <p class="contact-lead">Open to internships and junior roles in backend, industrial software or network infrastructure. Email is the quickest way to reach me.</p>
+          <p class="contact-cv cv-links">Resume: <a href="assets/cv/CV_EN_Santiago_Sanchez.pdf" hreflang="en" target="_blank" rel="noopener">English (PDF)</a> · <a href="assets/cv/CV_Santiago_Sanchez.pdf" hreflang="pt" lang="pt" target="_blank" rel="noopener">Português (PDF)</a></p>
+          <a class="contact-email" href="mailto:santiagomoli09@gmail.com">santiagomoli09@gmail.com</a>
+
+          <!-- Segunda fila de teclas (os atalhos de teclado usam só a primeira) -->
+          <nav class="social-keys" aria-label="Social links (contact)">
+            <div class="key-wrap">
+              <a class="key" data-brand="github" data-icon="assets/icons/github.svg"
+                 href="https://github.com/santimoli" target="_blank" rel="noopener"
+                 aria-label="Santiago Molina Sánchez on GitHub">
+                <span class="key-cap">
+                  <span class="key-legend" aria-hidden="true">G</span>
+                  <span class="key-icon" aria-hidden="true"></span>
+                  <span class="key-fallback" aria-hidden="true">G</span>
+                </span>
+              </a>
+              <span class="key-tip" aria-hidden="true">GitHub</span>
+            </div>
+            <div class="key-wrap">
+              <a class="key" data-brand="linkedin" data-icon="assets/icons/linkedin.svg"
+                 href="https://www.linkedin.com/in/santiMoliSanchez" target="_blank" rel="noopener"
+                 aria-label="Santiago Molina Sánchez on LinkedIn">
+                <span class="key-cap">
+                  <span class="key-legend" aria-hidden="true">L</span>
+                  <span class="key-icon" aria-hidden="true"></span>
+                  <span class="key-fallback" aria-hidden="true">in</span>
+                </span>
+              </a>
+              <span class="key-tip" aria-hidden="true">LinkedIn</span>
+            </div>
+            <div class="key-wrap">
+              <button class="key" type="button" data-brand="email" data-icon="envelope"
+                      data-email="santiagomoli09@gmail.com"
+                      aria-label="Copy Santiago Molina Sánchez's email address">
+                <span class="key-cap">
+                  <span class="key-legend" aria-hidden="true">E</span>
+                  <span class="key-icon" aria-hidden="true"></span>
+                  <span class="key-fallback" aria-hidden="true">@</span>
+                </span>
+              </button>
+              <span class="key-tip" aria-hidden="true">Copy email</span>
+            </div>
+            <div class="key-pop" role="status" aria-live="polite" hidden></div>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Visor das pranchas (plates.js): ← → muda de imagem, Esc fecha -->
+  <dialog class="viewer" aria-label="Image viewer">
+    <img class="viewer-img" alt="">
+    <video class="viewer-video" controls playsinline preload="none" hidden></video>
+    <div class="viewer-bar">
+      <p class="viewer-caption"></p>
+      <button class="viewer-btn" type="button" data-step="-1" aria-label="Previous image">←</button>
+      <button class="viewer-btn" type="button" data-step="1" aria-label="Next image">→</button>
+      <button class="viewer-btn" type="button" data-close aria-label="Close viewer">Esc</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>SMS-01 · © 2026 Santiago Molina Sánchez</p>
+      <p>End of document · Built with plain HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/code-background.js" defer></script>
+  <script src="js/social-keys.js" defer></script>
+  <script src="js/name-reveal.js" defer></script>
+  <script src="js/index-keys.js" defer></script>
+  <script src="js/plates.js" defer></script>
+  <script src="js/belt.js" defer></script>
+</body>
+</html>

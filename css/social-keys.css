@@ -1,0 +1,242 @@
+/*
+ * social-keys.css
+ * Teclas 3D (keycaps bege, estilo teclado IBM) para as redes sociais.
+ * Neutras em repouso, coral no hover. Ajusta as variáveis --key-* e --brand-*.
+ */
+
+.social-keys {
+  /* Tamanho e paleta da tecla: keycaps bege, estilo teclado IBM dos anos 80 */
+  --key-size: 56px;
+  --key-radius: 10px;
+  --key-depth: 7px;           /* altura da lateral visível */
+  --key-top: #f3e9d2;         /* topo da tecla */
+  --key-top-light: #fdf8ec;   /* zona mais clara do topo côncavo */
+  --key-side: #d8c6a2;        /* lateral / base */
+  --key-edge: #b8a27a;        /* contorno inferior da lateral */
+  --key-shadow: rgb(90 65 30 / 0.28); /* sombra quente no papel */
+  --key-icon: #1f2a44;        /* ícone em repouso (tinta azul) */
+  --key-legend: #6b5a3e;      /* letra do atalho no canto (sépia, 4.5:1 sobre o topo da tecla) */
+  --key-tip-bg: #1f2a44;
+  --key-tip-fg: #f5ebd3;
+  --key-link: #f4a08c;        /* link dentro do balão (coral claro sobre azul) */
+
+  /* Cor de interação: coral para as três teclas.
+     Para voltar às cores das marcas, troca os valores --brand-*. */
+  --key-accent: #c9583f;      /* coral um pouco mais escuro: o ícone lê-se melhor no bege */
+  --brand-github: var(--key-accent);
+  --brand-linkedin: var(--key-accent);
+  --brand-email: var(--key-accent);
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-top: 4px;           /* espaço para a tecla "levantar" no hover */
+  padding-bottom: calc(var(--key-depth) + 2px);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-ligatures: none;
+}
+
+.key-wrap {
+  position: relative;
+}
+
+/* ---------- A tecla ---------- */
+
+.key {
+  /* Reset para <a> e <button> ficarem iguais */
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  position: relative;
+  display: block;
+  width: var(--key-size);
+  height: var(--key-size);
+  border-radius: var(--key-radius);
+}
+
+.key[data-brand="github"]   { --brand: var(--brand-github); }
+.key[data-brand="linkedin"] { --brand: var(--brand-linkedin); }
+.key[data-brand="email"]    { --brand: var(--brand-email); }
+
+.key:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 4px;
+}
+
+/* O topo da tecla. A lateral é desenhada pela primeira sombra sólida. */
+.key-cap {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--key-radius);
+  background: radial-gradient(ellipse 75% 65% at 50% 35%, var(--key-top-light), var(--key-top) 75%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.8),      /* aresta de cima iluminada */
+    inset 0 -3px 6px rgb(120 90 40 / 0.18),    /* curvatura côncava */
+    0 var(--key-depth) 0 var(--key-side),      /* lateral da tecla */
+    0 calc(var(--key-depth) + 1px) 0 var(--key-edge), /* contorno da base */
+    0 calc(var(--key-depth) + 3px) 12px var(--key-shadow); /* sombra no papel */
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+/* Hover: levanta e acende por baixo com a cor da marca (estilo RGB) */
+.key:hover .key-cap,
+.key:focus-visible .key-cap {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.85),
+    inset 0 -3px 6px rgb(120 90 40 / 0.18),
+    0 calc(var(--key-depth) + 2px) 0 var(--key-side),
+    0 calc(var(--key-depth) + 3px) 0 var(--key-edge),
+    0 calc(var(--key-depth) + 6px) 16px var(--key-shadow),
+    0 6px 18px -6px color-mix(in srgb, var(--brand) 50%, transparent);
+}
+
+/* Carregar: afunda quase até à base */
+.key:active .key-cap,
+.key.is-pressed .key-cap {
+  transform: translateY(calc(var(--key-depth) - 1px));
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.6),
+    inset 0 -2px 5px rgb(120 90 40 / 0.22),
+    0 1px 0 var(--key-side),
+    0 2px 0 var(--key-edge),
+    0 2px 4px var(--key-shadow),
+    0 2px 14px -4px color-mix(in srgb, var(--brand) 55%, transparent);
+  transition-duration: 0.05s;
+}
+
+/* ---------- Conteúdo da tecla ---------- */
+
+/* O ícone é uma máscara: o SVG dá a forma, a cor vem do CSS. */
+.key-icon {
+  width: 42%;
+  height: 42%;
+  background: var(--key-icon);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+          mask: var(--icon) center / contain no-repeat;
+  transition: background-color 0.15s ease;
+}
+
+/* Se o ficheiro do ícone não existir, aparece a letra em grande. */
+.key-fallback {
+  display: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--key-icon);
+  transition: color 0.15s ease;
+}
+.key.icon-missing .key-icon     { display: none; }
+.key.icon-missing .key-fallback { display: block; }
+
+.key:hover .key-icon,
+.key:focus-visible .key-icon,
+.key.is-pressed .key-icon {
+  background: var(--brand);
+}
+.key:hover .key-fallback,
+.key:focus-visible .key-fallback,
+.key.is-pressed .key-fallback {
+  color: var(--brand);
+}
+
+/* Legenda do atalho no canto, como num keycap */
+.key-legend {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-size: 10px;
+  line-height: 1;
+  color: var(--key-legend);
+}
+
+/* ---------- Tooltip com o nome da rede ---------- */
+
+.key-tip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translate(-50%, 4px);
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--key-tip-bg);
+  color: var(--key-tip-fg);
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.key-wrap:hover .key-tip,
+.key:focus-visible + .key-tip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.social-keys.pop-open .key-tip {
+  opacity: 0;
+}
+
+/* ---------- Balão do email ---------- */
+
+.key-pop {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  max-width: min(340px, calc(100vw - 32px));
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--key-tip-bg);
+  color: var(--key-tip-fg);
+  font-size: 12px;
+  box-shadow: 0 8px 20px var(--key-shadow);
+  animation: key-pop-in 160ms ease-out both;
+}
+@keyframes key-pop-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.key-pop[hidden] { display: none; }
+.key-pop a {
+  color: var(--key-link);
+  text-underline-offset: 3px;
+}
+.key-pop-address {
+  user-select: all;
+  -webkit-user-select: all;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Movimento reduzido: só muda a cor ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .key-cap,
+  .key-tip,
+  .key-pop {
+    transition: none;
+    animation: none;
+  }
+  .key:hover .key-cap,
+  .key:focus-visible .key-cap,
+  .key:active .key-cap,
+  .key.is-pressed .key-cap {
+    transform: none;
+  }
+  .key-tip {
+    transform: translate(-50%, 0);
+  }
+}
