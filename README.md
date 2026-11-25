@@ -1,6 +1,6 @@
 # Portfólio de Santiago Molina Sánchez
 
-O meu portfólio, publicado em https://santiagomolina.pages.dev. Sou licenciado em Engenharia Informática e estou a fazer o mestrado em Informática. A área de que mais gosto é engenharia de software.
+O meu portfólio, publicado em https://santiagomoli.pages.dev. Sou licenciado em Engenharia Informática e estou a fazer o mestrado em Informática. A área de que mais gosto é engenharia de software.
 
 É uma página única em HTML, CSS e JavaScript, sem frameworks e sem build. O aspeto imita um manual técnico de fabricante, com secções numeradas, figuras com legenda e uma folha de especificações. Impressa, sai como um documento A4.
 
